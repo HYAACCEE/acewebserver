@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC 
+    "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <form-beans>
+    
+    <form-bean name="HIService" type="com.svv.dms.app.service.HIService"/>
+    <form-bean name="UserService" type="com.svv.dms.app.service.UserService"/>  
+    <form-bean name="MessageService" type="com.svv.dms.app.service.MessageService"/>
+    <form-bean name="MainService" type="com.svv.dms.app.service.MainService"/>
+    <form-bean name="ComService" type="com.svv.dms.app.service.ComService"/>
+    <form-bean name="CandiService" type="com.svv.dms.app.service.CandiService"/>
+    <form-bean name="CandiListService" type="com.svv.dms.app.service.CandiListService"/>
+    <form-bean name="CandiDetailService" type="com.svv.dms.app.service.CandiDetailService"/>
+    <form-bean name="CandiProcessService" type="com.svv.dms.app.service.CandiProcessService"/>
+    <form-bean name="CandiCommentService" type="com.svv.dms.app.service.CandiCommentService"/>
+    <form-bean name="JobService" type="com.svv.dms.app.service.JobService"/>
+    <form-bean name="MMService" type="com.svv.dms.app.service.MMService"/>
+    <form-bean name="BillService" type="com.svv.dms.app.service.BillService"/>
+    <form-bean name="StatService" type="com.svv.dms.app.service.StatService"/>
+  </form-beans>
+
+  <global-exceptions>
+    <exception key="errors.general" type="java.lang.Exception" path="/common/Error.jsp"/>
+  </global-exceptions>
+
+  <global-forwards>
+    <forward name="index" path="/index.jsp"/>
+    <forward name="error" path="/common/Error.jsp"/>
+    <forward name="message" path="/common/CommonMessageFlash.jsp"/>
+    <forward name="download" path="/common/CommonPDFDownload.jsp"/>
+    <forward name="preview" path="/common/CommonPDFFlash.jsp"/>
+    <forward name="poi" path="/common/CommonPoiFlash.jsp" />
+  </global-forwards>
+
+  <action-mappings>
+    
+    <action name="HIService" path="/HIService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="HIService" path="/HIBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="HIService" path="/HISService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="HIService" path="/HICService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="HIService" path="/HIMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="UserService" path="/UserBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="UserService" path="/UserSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="UserService" path="/UserCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="UserService" path="/UserMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MessageService" path="/MessageService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MainService" path="/MainBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MainService" path="/MainSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MainService" path="/MainCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MainService" path="/MainMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="ComService" path="/ComService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiService" path="/CandiBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiService" path="/CandiSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiService" path="/CandiCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiService" path="/CandiMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiListService" path="/CandiListBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiListService" path="/CandiListSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiListService" path="/CandiListCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiListService" path="/CandiListMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiDetailService" path="/CandiDetailBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiDetailService" path="/CandiDetailSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiDetailService" path="/CandiDetailCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiDetailService" path="/CandiDetailMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiProcessService" path="/CandiProcessBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiProcessService" path="/CandiProcessSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiProcessService" path="/CandiProcessCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiProcessService" path="/CandiProcessMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiCommentService" path="/CandiCommentBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiCommentService" path="/CandiCommentSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiCommentService" path="/CandiCommentCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="CandiCommentService" path="/CandiCommentMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="JobService" path="/JobBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="JobService" path="/JobSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="JobService" path="/JobCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="JobService" path="/JobMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MMService" path="/MMBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MMService" path="/MMSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MMService" path="/MMCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="MMService" path="/MMMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="BillService" path="/BillBService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="BillService" path="/BillSService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="BillService" path="/BillCService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="BillService" path="/BillMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+    <action name="StatService" path="/StatMService" scope="request" validate="false" type="com.jeesoon.struts.beanaction.AbstractAction"></action>
+
+  </action-mappings>
+
+</struts-config>
